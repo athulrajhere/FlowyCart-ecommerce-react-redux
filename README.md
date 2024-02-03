@@ -8,28 +8,27 @@ FlowyCart - An E-commerce site build using React, Redux, Redux-toolkit, React-ro
 
 ## Built with
 
-+React
-+Redux
-+Redux toolkit
-+Redux-thunk
-+Typescript
-+Axios - http client
-+React Router v6
++ React
++ Redux
++ Redux toolkit
++ Redux-thunk
++ Typescript
++ Axios - http client
++ React Router v6
 
 ## Features
 
-+Fully responsive design
-+Add to cart
-+Delete from cart
-+Checkout
-+Lazy loading of images
-+Image Optimization
-+Static footer containing a set of links
-+Home (List products)
-+Detail products
-+Recommended products
-+Cart
-+Login / Register
++ Fully responsive design
++ Add to cart
++ Delete from cart
++ Checkout
++ Lazy loading of images
++ Image Optimization
++ Static footer containing a set of links
++ Home (List products)
++ Product Details
++ Cart
++ Login / Register
 
 ## Installation
 
