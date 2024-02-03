@@ -66,12 +66,3 @@ npm run dev
 ![FC6](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/536a196e-928d-47c4-b212-02081be8b5be)
 
 ### Shopping Bag
-
-![FC7](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/13cc6369-f7bc-4119-a159-157dca1f28ea)
-![FC9](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/3ee72e18-4ae5-4305-8822-03868063b08c)
-![FC10](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/1b7fcc66-85f3-496e-96e4-579248a5b3f0)
-![FC11](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/3e10c9ee-c504-4635-99ae-cf76931a3d65)
-![FC12](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/608ed03d-3184-4a65-aec0-f946765a1291)
-![FC13](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/fe099ccc-9c70-469c-92db-00e6afb8f615)
-![FC14](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/aa80a7d6-eb6a-467b-ba2e-db0604af676a)
-![FC15](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/dab47779-8b55-4b6b-bc3c-491e806f50b9)
