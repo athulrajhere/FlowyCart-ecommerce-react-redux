@@ -1,5 +1,5 @@
 import React from "react";
-import { useAppDispatch, useAppSelector } from "../../../app/hooks";
+import { useAppSelector } from "../../../app/hooks";
 import Button from "../../../components/components/Button";
 import Modal from "../../../components/components/Modal";
 import styles from "./index.module.scss";

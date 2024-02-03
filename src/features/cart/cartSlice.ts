@@ -68,7 +68,7 @@ export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    cartReset: (state) => initialState,
+    cartReset: () => initialState,
   },
   extraReducers: (builder) => {
     builder

@@ -11,9 +11,7 @@ import GoToTop from "../../components/components/GoToTop";
 import Spinner from "../../components/components/Spinner";
 
 const Product = () => {
-  const { product, isLoading } = useAppSelector(
-    (state) => state.product
-  );
+  const { product, isLoading } = useAppSelector((state) => state.product);
   const dispatch = useAppDispatch();
   const { id } = useParams();
 
@@ -71,7 +69,7 @@ const Product = () => {
               <div className={styles.title}>Size:</div>
               <div className={styles.categories}>
                 <div className={styles.buttonContainer}>
-                  {sizeData?.map((item, index) => {
+                  {sizeData?.map((item) => {
                     return (
                       <div className={styles.button}>
                         <input type="radio" id={item} name="category" />
