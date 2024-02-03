@@ -1,4 +1,22 @@
-\# Flowy Cart - E-commerce
+<p align="center">
+  <a href="https://opencollective.com/swiper">
+    <img src="https://opencollective.com/swiper/all/badge.svg?label=financial+contributors" alt="Financial Contributors on Open Collective"/>
+  </a>
+  <a href="https://github.com/nolimits4web/swiper/actions?query=workflow%3ABuild">
+    <img src="https://github.com/nolimits4web/swiper/workflows/Build/badge.svg" alt="Build status"/>
+  </a>
+  <a href="https://www.jsdelivr.com/package/npm/swiper">
+    <img src="https://data.jsdelivr.com/v1/package/npm/swiper/badge?style=rounded" alt="jsDelivr Hits"/>
+  </a>
+  <a href="https://bundlephobia.com/result?p=swiper">
+    <img alt="tree-shakeable" src="https://badgen.net/bundlephobia/tree-shaking/swiper" />
+  </a>
+  <a href="https://npmjs.org/package/swiper">
+    <img alt="types included" src="https://badgen.net/npm/types/swiper" />
+  </a>
+</p>
+
+# Flowy Cart - E-commerce
 
 FlowyCart - An E-commerce site build using React, Redux, Redux-toolkit, React-router-dom and Typescript
 
