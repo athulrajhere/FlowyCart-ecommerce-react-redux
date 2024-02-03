@@ -9,7 +9,7 @@ import Spinner from "../../components/components/Spinner";
 import GoToTop from "../../components/components/GoToTop";
 import Button from "../../components/components/Button";
 import { MdArrowBack } from "react-icons/md";
-import { ROUTES } from "../../constants/route";
+import { ROUTES } from "../../constants/Route";
 
 const Catalog = () => {
   let { id } = useParams();
