@@ -53,17 +53,9 @@ npm run dev
 ### Landing Page
 
 ![FC1](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/08bfe128-7342-4c40-8068-f6e925391932)
-### Quick View
-
-![Fc2](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/3791886a-949f-459a-bb0c-6717d5872987)
-![Screenshot 2024-02-03 172801](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/8028e20b-ba8f-4324-8119-d90d6cf02f66)
 
 ### Collections
 ![FC3](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/698c079d-a4ee-463d-ace3-5f0236eb7795)
-
-### Catalog
-
-![FC4](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/0404dffe-fcad-443e-8e65-054c83b568e9)
 
 ### Product Details
 
