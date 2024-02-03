@@ -10,6 +10,7 @@ import ProductCard from "../../../components/components/ProductCard";
 import { navData } from "../../../data/navItems";
 import { MdArrowRightAlt } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { ROUTES } from "../../../constants/Route";
 
 const QuickView = () => {
   const { products } = useAppSelector((state) => state.product);
@@ -27,7 +28,10 @@ const QuickView = () => {
     const target = e.target as HTMLInputElement;
     setSelectedCategory(target.id);
     if (target.value !== "all") {
-      dispatch(getCategory(target.value.toLowerCase()));
+      const pathUrl = ROUTES.filter((item) => {
+        return item.name.toLowerCase() === target.value.toLowerCase();
+      });
+      dispatch(getCategory(pathUrl[0].url.toLowerCase()));
     } else {
       dispatch(getProducts());
     }
