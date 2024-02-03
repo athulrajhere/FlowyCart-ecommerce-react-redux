@@ -11,8 +11,8 @@ FlowyCart - An E-commerce site build using React, Redux, Redux-toolkit, React-ro
 + Redux toolkit
 + Redux-thunk
 + Typescript
-+ Axios - http client
-+React Router v6
++ Axios
++ React Router v6
 
 ## Features
 
