@@ -32,7 +32,7 @@ FlowyCart - An E-commerce site build using React, Redux, Redux-toolkit, React-ro
 
 ## Installation
 
-- [ ] ### Clone the Repository
+### - [ ] Clone the Repository
 ```
 https://github.com/athulrajhere/ecommerce-react-redux-typescript.git
 ```
