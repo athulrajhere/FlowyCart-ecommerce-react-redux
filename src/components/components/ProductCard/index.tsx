@@ -27,7 +27,7 @@ const ProductCard: FC<Product> = ({
     query: "(min-width: 768px)",
   });
 
-  const showActionIcons = (isShow) => {
+  const showActionIcons = (isShow: boolean) => {
     isShow ? setShowIcons(true) : setShowIcons(false);
   };
 
@@ -82,37 +82,36 @@ const ProductCard: FC<Product> = ({
             </div>
           )}
         </div>
-        
       </div>
       <div className={styles.productDetailsContainer}>
-          <div className={styles.productDetails}>
-            <div className={styles.productTitle}>
-              <Link to={`/catalog/men`}>{title}</Link>
-            </div>
-            <div className={styles.productPrice}>{price}$</div>
+        <div className={styles.productDetails}>
+          <div className={styles.productTitle}>
+            <Link to={`/catalog/men`}>{title}</Link>
           </div>
-          {isBigScreen ? (
-            <motion.div
-              key="cart"
-              whileHover={{ zoom: 1.2 }}
-              style={{ height: "100%" }}
-            >
-              <Link
-                to={`/products/${String(id)}`}
-                className={styles.iconCcontainer}
-              >
-                <MdArrowOutward className={styles.icon} />
-              </Link>
-            </motion.div>
-          ) : (
-            <Button
-              className={styles.iconCcontainer}
-              onClick={() => addToCartHandler()}
-            >
-              <CgShoppingBag className={styles.icon} />
-            </Button>
-          )}
+          <div className={styles.productPrice}>{price}$</div>
         </div>
+        {isBigScreen ? (
+          <motion.div
+            key="cart"
+            whileHover={{ zoom: 1.2 }}
+            style={{ height: "100%" }}
+          >
+            <Link
+              to={`/products/${String(id)}`}
+              className={styles.iconCcontainer}
+            >
+              <MdArrowOutward className={styles.icon} />
+            </Link>
+          </motion.div>
+        ) : (
+          <Button
+            className={styles.iconCcontainer}
+            onClick={() => addToCartHandler()}
+          >
+            <CgShoppingBag className={styles.icon} />
+          </Button>
+        )}
+      </div>
     </motion.div>
   );
 };

@@ -14,7 +14,7 @@ import { TbTruckReturn } from "react-icons/tb";
 import Spinner from "../../components/components/Spinner";
 
 const Cart = () => {
-  const { cartItems, status, isLoading } = useAppSelector(
+  const { cartItems, isLoading } = useAppSelector(
     (state) => state.cart
   );
   const dispatch = useAppDispatch();

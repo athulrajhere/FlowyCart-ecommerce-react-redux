@@ -12,9 +12,7 @@ import { MdArrowBack } from "react-icons/md";
 
 const Catalog = () => {
   let { id } = useParams();
-  const { products, status, isLoading } = useAppSelector(
-    (state) => state.product
-  );
+  const { products, isLoading } = useAppSelector((state) => state.product);
 
   const dispatch = useAppDispatch();
   const navigate = useNavigate();

@@ -21,8 +21,8 @@ const LoginPage = () => {
     e.preventDefault();
 
     const data = new FormData(e.currentTarget);
-    const username = data.get("username");
-    const password = data.get("password");
+    const username = data.get("username") as string;
+    const password = data.get("password") as string;
 
     await dispatch(login({ username, password }));
     if (user && token) {
@@ -75,7 +75,9 @@ const LoginPage = () => {
                 <div className={styles.formField}>
                   <input type="text" name="username" placeholder="Username:" />
                 </div>
-                <p className={styles.apiSignExample}>demo username: mor_2314</p>
+                <p className={styles.apiSignExample}>
+                  demo username: <strong>mor_2314</strong>
+                </p>
               </div>
               <div className={styles.formItem}>
                 <div className={styles.formField}>
@@ -85,7 +87,9 @@ const LoginPage = () => {
                     placeholder="Password:"
                   />
                 </div>
-                <p className={styles.apiSignExample}>demo password: 83r5^_</p>
+                <p className={styles.apiSignExample}>
+                  demo password: <strong>83r5^_</strong>
+                </p>
               </div>
               <div className={styles.formSubmit}>
                 <button type="submit">Sign In</button>

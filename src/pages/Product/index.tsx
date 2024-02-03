@@ -11,7 +11,7 @@ import GoToTop from "../../components/components/GoToTop";
 import Spinner from "../../components/components/Spinner";
 
 const Product = () => {
-  const { product, status, isLoading } = useAppSelector(
+  const { product, isLoading } = useAppSelector(
     (state) => state.product
   );
   const dispatch = useAppDispatch();
@@ -22,7 +22,7 @@ const Product = () => {
     const cartProduct: CartItem = {
       quantity: 1,
       product: {
-        id: id,
+        id: Number(id),
         title: product.title,
         price: product.price,
         image: product.image,

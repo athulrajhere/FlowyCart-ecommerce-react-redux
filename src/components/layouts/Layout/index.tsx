@@ -11,7 +11,9 @@ const Layout = () => {
 
   useEffect(() => {
     const body = document.querySelector("body");
-    body.style.overflow = showModal ? "hidden" : "auto";
+    if (body) {
+      body.style.overflow = showModal ? "hidden" : "auto";
+    }
   }, [showModal]);
 
   const handleShow = () => {

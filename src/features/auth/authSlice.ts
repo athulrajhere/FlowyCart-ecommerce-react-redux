@@ -28,7 +28,10 @@ export const login = createAsyncThunk(
   "auth/login",
   async (user: Login, thunkAPI) => {
     try {
-      return await authService.login(user);
+      return await authService.login({
+        username: String(user.username),
+        password: String(user.password),
+      });
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
@@ -58,7 +61,7 @@ export const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    authReset: (state) => {
+    authReset: () => {
       initialState;
     },
   },
@@ -79,7 +82,7 @@ export const authSlice = createSlice({
           toast.success(state.status);
         }
       )
-      .addCase(login.rejected, (state: AuthState, action) => {
+      .addCase(login.rejected, (state: AuthState) => {
         state.isLoading = false;
         state.isError = true;
         state.user = null;

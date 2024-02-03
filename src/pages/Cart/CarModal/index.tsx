@@ -13,8 +13,7 @@ interface CartModalProps {
 }
 
 const CartModal: React.FC<CartModalProps> = ({ show, setShow }) => {
-  const { cartItems, status } = useAppSelector((state) => state.cart);
-  const dispatch = useAppDispatch();
+  const { cartItems } = useAppSelector((state) => state.cart);
 
   const isBigScreen = useMediaQuery({
     query: "(min-width: 768px)",

@@ -1,13 +1,13 @@
 export interface UserDetails {
-  name: string;
+  name: {
+    firstname: string;
+    lastname: string;
+  };
   email: string;
-  photoURL: string;
-  address: string;
-  state: string;
-  country: string;
-  zip: string;
-  birth: string;
-  phone: string;
+  address: {
+    city: string;
+    number: string;
+  };
 }
 
 export interface Login {

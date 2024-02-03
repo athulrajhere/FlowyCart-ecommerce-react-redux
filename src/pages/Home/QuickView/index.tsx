@@ -12,7 +12,7 @@ import { MdArrowRightAlt } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const QuickView = () => {
-  const { products, status } = useAppSelector((state) => state.product);
+  const { products } = useAppSelector((state) => state.product);
   const dispatch = useAppDispatch();
 
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
@@ -21,10 +21,13 @@ const QuickView = () => {
     dispatch(getProducts());
   }, []);
 
-  const handleCategory = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedCategory(e.target.id);
-    if (e.target.value !== "all") {
-      dispatch(getCategory(e.target.value.toLowerCase()));
+  const handleCategory = (
+    e: React.MouseEvent<HTMLInputElement, MouseEvent>
+  ) => {
+    const target = e.target as HTMLInputElement;
+    setSelectedCategory(target.id);
+    if (target.value !== "all") {
+      dispatch(getCategory(target.value.toLowerCase()));
     } else {
       dispatch(getProducts());
     }
@@ -44,7 +47,9 @@ const QuickView = () => {
                     id={item.name}
                     name="category"
                     value={item.value}
-                    onClick={handleCategory}
+                    onClick={(
+                      e: React.MouseEvent<HTMLInputElement, MouseEvent>
+                    ) => handleCategory(e)}
                   />
                   <label className="btn btn-default" htmlFor={item.name}>
                     {item.name}

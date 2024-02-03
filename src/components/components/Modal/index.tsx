@@ -10,7 +10,6 @@ const ModalContext = createContext<IModal | undefined>(undefined);
 
 export const Modal = ({
   children,
-  isOpen,
   onClose,
   isRight,
 }: {
@@ -42,24 +41,6 @@ export const Modal = ({
         visible: { y: 0, opacity: 1 },
         exit: { y: "50vh", opacity: 0 },
       };
-
-  const diffuse = {
-    hidden: {
-      y: -50,
-      opacity: 0,
-    },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-    exit: {
-      y: -50,
-      opacity: 0,
-    },
-  };
 
   return (
     <motion.div
@@ -109,7 +90,6 @@ const DismissButton = ({
 };
 
 const ModalHeader = ({ children }: { children: ReactNode }) => {
-  const { onClose } = useContext(ModalContext) as IModal;
   return (
     <div className={styles.reactModalHeader}>
       <div className={styles.reactModalTitle}>{children}</div>
@@ -120,11 +100,9 @@ const ModalHeader = ({ children }: { children: ReactNode }) => {
 const ModalBody = ({
   children,
   isRight,
-  closeButton,
 }: {
   children: ReactNode;
   isRight?: boolean;
-  closeButton?: boolean;
 }) => {
   return (
     <>

@@ -6,7 +6,7 @@ import { STATUS } from "../../constants/Status";
 
 interface ProductState {
   products: Product[];
-  product: Product[];
+  product: Product;
   isError: boolean;
   isSuccess: boolean;
   isLoading: boolean;
@@ -15,7 +15,14 @@ interface ProductState {
 
 const initialState: ProductState = {
   products: [],
-  product: [],
+  product: {
+    category: "",
+    description: "",
+    id: 0,
+    image: "",
+    price: 0,
+    title: "",
+  },
   isError: false,
   isSuccess: false,
   isLoading: false,
@@ -57,7 +64,7 @@ export const productSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
-    productReset: (state) => initialState,
+    productReset: () => initialState,
   },
   extraReducers: (builder) => {
     builder
@@ -86,7 +93,7 @@ export const productSlice = createSlice({
       })
       .addCase(
         getSingleProduct.fulfilled,
-        (state: ProductState, action: PayloadAction<Product[]>) => {
+        (state: ProductState, action: PayloadAction<Product>) => {
           state.isLoading = false;
           state.isSuccess = true;
           state.product = action.payload;
