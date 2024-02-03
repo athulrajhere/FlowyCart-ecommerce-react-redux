@@ -1,4 +1,4 @@
-# Flowy Cart - E-commerce
+\# Flowy Cart - E-commerce
 
 FlowyCart - An E-commerce site build using React, Redux, Redux-toolkit, React-router-dom and Typescript
 
@@ -36,13 +36,13 @@ https://github.com/athulrajhere/ecommerce-react-redux-typescript.git
 ```
 - [ ] Enter into the directory
 ```
- $ cd ecommerce-react-redux-typescript
+cd ecommerce-react-redux-typescript
 ```
 - [ ] Install all dependencies
 ```
-$ npm install
+npm install
 ```
 - [ ] Start the Development Server
 ```
-$ npm run dev
+npm run dev
 ```
