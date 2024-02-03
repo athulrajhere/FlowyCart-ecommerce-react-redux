@@ -36,13 +36,13 @@ https://github.com/athulrajhere/ecommerce-react-redux-typescript.git
 ```
 - [ ] Enter into the directory
 ```
-https://github.com/athulrajhere/ecommerce-react-redux-typescript.git
+ $ cd ecommerce-react-redux-typescript
 ```
 - [ ] Install all dependencies
 ```
-https://github.com/athulrajhere/ecommerce-react-redux-typescript.git
+$ npm install
 ```
 - [ ] Start the Development Server
 ```
-https://github.com/athulrajhere/ecommerce-react-redux-typescript.git
+$ npm run dev
 ```
