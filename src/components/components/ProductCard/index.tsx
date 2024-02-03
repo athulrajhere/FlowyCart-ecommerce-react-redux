@@ -86,7 +86,7 @@ const ProductCard: FC<Product> = ({
       <div className={styles.productDetailsContainer}>
         <div className={styles.productDetails}>
           <div className={styles.productTitle}>
-            <Link to={`/catalog/men`}>{title}</Link>
+            <div>{title}</div>
           </div>
           <div className={styles.productPrice}>{price}$</div>
         </div>

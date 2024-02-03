@@ -9,6 +9,7 @@ import Spinner from "../../components/components/Spinner";
 import GoToTop from "../../components/components/GoToTop";
 import Button from "../../components/components/Button";
 import { MdArrowBack } from "react-icons/md";
+import { ROUTES } from "../../constants/route";
 
 const Catalog = () => {
   let { id } = useParams();
@@ -31,7 +32,10 @@ const Catalog = () => {
       }),
     ];
     if (category[0].value !== "all") {
-      dispatch(getCategory(category[0].value.toLowerCase()));
+      const pathUrl = ROUTES.filter((item) => {
+        return item.name.toLowerCase() === category[0].value.toLowerCase();
+      });
+      dispatch(getCategory(pathUrl[0].url.toLowerCase()));
     } else {
       dispatch(getProducts());
     }
