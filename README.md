@@ -46,3 +46,6 @@ npm install
 ```
 npm run dev
 ```
+
+## Screenshots
+![FC1](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/08bfe128-7342-4c40-8068-f6e925391932)
