@@ -1,5 +1,3 @@
-[![My Skills](https://skillicons.dev/icons?i=vite,react,redux,ts)](https://skillicons.dev)
-
 # Getting Started
 
 FlowyCart - An E-commerce site build using React, Redux, Redux-toolkit, React-router-dom and Typescript
