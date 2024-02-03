@@ -64,3 +64,7 @@ npm run dev
 ### Cart Modal
 
 ![FC6](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/536a196e-928d-47c4-b212-02081be8b5be)
+
+### Shopping Bag
+
+![FC7](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/112643db-83fe-4d73-96a2-0f0a29f363ad)
