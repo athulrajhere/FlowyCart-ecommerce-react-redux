@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import { AnimatePresence } from "framer-motion";
 import CartModal from "../../../pages/Cart/CarModal";
-import Footer from "../Footer";
+import Footer from "./Footer";
 
 const Layout = () => {
   const [showModal, setShow] = useState(false);
