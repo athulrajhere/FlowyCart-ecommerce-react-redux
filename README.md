@@ -58,17 +58,17 @@ npm run dev
 ![Fc2](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/3791886a-949f-459a-bb0c-6717d5872987)
 ![Screenshot 2024-02-03 172801](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/8028e20b-ba8f-4324-8119-d90d6cf02f66)
 
-![FC3](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/698c079d-a4ee-463d-ace3-5f0236eb7795)
-
 ### Collections
-
-![FC4](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/0404dffe-fcad-443e-8e65-054c83b568e9)
+![FC3](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/698c079d-a4ee-463d-ace3-5f0236eb7795)
 
 ### Women
 
-![FC5](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/b2151f0a-5037-4355-909f-87ba054a0085)
+![FC4](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/0404dffe-fcad-443e-8e65-054c83b568e9)
 
 ### Product Details
+
+![FC5](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/b2151f0a-5037-4355-909f-87ba054a0085)
+
 
 ![FC6](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/536a196e-928d-47c4-b212-02081be8b5be)
 ![FC7](https://github.com/athulrajhere/FlowyCart-ecommerce-react-redux/assets/47721687/13cc6369-f7bc-4119-a159-157dca1f28ea)
