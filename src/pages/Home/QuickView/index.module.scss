@@ -1,0 +1,128 @@
+.section {
+  overflow: hidden !important;
+
+  @media (min-width: 496px) {
+    top: 0rem;
+  }
+  .container {
+    padding: 3rem 0 1.5rem 0;
+
+    @media (min-width: 768px) {
+      padding: 8rem 0 2.5rem 0;
+    }
+
+    .section_title_top {
+      font-family: $font-f-title;
+      font-weight: $font-w-700;
+      font-size: 36px;
+      letter-spacing: $ls-secondary;
+      color: $c-title;
+      line-height: 0.3;
+      margin-bottom: 0.4rem;
+    }
+
+    .section_title_bottom {
+      margin-bottom: 0.5rem;
+      font-size: 2.4rem;
+      text-transform: uppercase;
+    }
+
+    .productList {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(10rem, 1fr));
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 2.5rem 0;
+
+      @media (min-width: 496px) {
+        grid-template-columns: repeat(3, minmax(10rem, 1fr));
+      }
+
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(4, minmax(10rem, 1fr));
+      }
+    }
+
+    .categories {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 2rem 0 2rem 0;
+
+      @media (min-width: 496px) {
+        margin: 0 0 2rem 0;
+      }
+
+      .buttonContainer {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 10px;
+        gap: 0;
+        @media (min-width: 496px) {
+          gap: 2rem;
+          display: flex;
+          font-size: 16px;
+          font-weight: $font-w-700;
+        }
+        .button {
+          float: left;
+          margin: 0 5px 0 0;
+          min-width: 100px;
+          height: 40px;
+          position: relative;
+
+          @media (max-width: 496px) {
+            min-width: 50px;
+          }
+        }
+
+        .button label,
+        .button input {
+          display: flex;
+          justify-content: center;
+          border-radius: 999rem;
+          padding: 0.8rem 1.3rem;
+          border: 1px solid;
+          font-family: $font-f-title;
+        }
+
+        .button input[type="radio"] {
+          opacity: 0.011;
+          z-index: 100;
+        }
+
+        .button input[type="radio"]:checked + label {
+          background: $c-title;
+          color: $c-secondary;
+          font-family: $font-f-title;
+          border-radius: 999rem;
+          padding: 0.8rem 1.3rem;
+        }
+
+        .button label {
+          cursor: pointer;
+          z-index: 90;
+          line-height: 1.8em;
+        }
+      }
+      .viewAllContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $font-f-title;
+        font-size: 12px;
+        font-weight: $font-w-400;
+        color: $c-title;
+        @media (min-width: 496px) {
+          display: flex;
+          font-size: 24px;
+        }
+
+        @media (min-width: 768px) {
+          padding: 2.5rem 0;
+        }
+      }
+    }
+  }
+}

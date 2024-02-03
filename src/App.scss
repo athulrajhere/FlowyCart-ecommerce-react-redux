@@ -1,0 +1,125 @@
+#layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: hsl(0, 0%, 95%);
+    border-radius: 100vw;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 76%);
+    border-radius: 100vw;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 0%, 66%);
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 1000;
+  color: #000;
+  font-size: 1.2rem;
+  overflow-x: hidden;
+  background: linear-gradient(0deg, #ffffff, #fee9f7);
+}
+
+input,
+textarea,
+select {
+  font-family: $font-f-secondary;
+  font-size: 1.6rem;
+}
+
+input[type="password"] {
+  font-family: Verdana;
+  letter-spacing: 0.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+h1 {
+  font-size: 2rem;
+  @media (min-width: 768px) {
+    font-size: 5.6rem;
+  }
+}
+h2,
+h3,
+h4 {
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.fonts_license {
+  display: none;
+}
+
+.main-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

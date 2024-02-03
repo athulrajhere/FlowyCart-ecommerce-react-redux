@@ -1,0 +1,142 @@
+.reactModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: $z-modal;
+  display: flex;
+
+  @media (min-width: 496px) {
+    overflow-y: auto;
+  }
+}
+
+.reactModalWrapper {
+  width: 100%;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 496px) {
+    // overflow-y: hidden;
+  }
+}
+
+.modalWrapperRight {
+  margin: 2rem 1rem;
+  justify-content: end;
+}
+
+.reactModalContent {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden !important;
+
+  position: relative;
+  top: 2.5rem;
+  background: #ffffff;
+  background: linear-gradient(0deg, #ffffff, #fee9f7);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-clip: padding-box;
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: 496px) {
+    width: auto;
+    top: 0;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+
+    @media (min-width: 900px) {
+      width: 1rem;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 100vw;
+    margin: 0.3rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #aaaaaa;
+  }
+}
+
+.modalContentRight {
+  flex-direction: column;
+
+  &::-webkit-scrollbar {
+    width: 0;
+
+    @media (min-width: 900px) {
+      width: 1rem;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 100vw;
+    margin: 0.3rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #aaaaaa;
+  }
+}
+
+.reactModalBody {
+  padding: 0 1rem;
+}
+.reactModalHeader {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reactModalTitle {
+  line-height: 1.5;
+  font-size: 1.25rem;
+}
+
+.btnCloseContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btnClose {
+  border: none;
+  font-size: 2rem;
+  padding: 0.25rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+  background: transparent;
+}
+
+.reactModalFooter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.reactModalFooter > * {
+  margin: 0 0.25rem;
+}

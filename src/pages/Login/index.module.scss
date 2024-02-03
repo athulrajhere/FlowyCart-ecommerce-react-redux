@@ -1,0 +1,94 @@
+.section {
+  overflow: hidden !important;
+
+  @media (min-width: 496px) {
+    top: 0rem;
+  }
+  .container {
+    padding: 8rem 0 1.5rem 0;
+
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      padding: 8rem 0 2.5rem 0;
+    }
+
+    button {
+      border: none;
+      display: flex;
+      font-size: 12px;
+      font-family: $font-f-title;
+      font-weight: $font-w-400;
+      background-color: #ffba00;
+      color: $c-primary;
+      line-height: 1.5;
+      border-radius: 16px;
+      padding: 0.8rem 2rem;
+      cursor: pointer;
+
+      &:hover,
+      &:active,
+      &:focus {
+        border: none;
+        font-weight: $font-w-700;
+        background-color: #ffba00;
+        color: $c-primary;
+      }
+
+      @media (min-width: 478px) {
+        font-size: 16px;
+      }
+    }
+    .loginContainer {
+      .formItem {
+        padding: 1rem 0;
+        .formField {
+          input {
+            border: none;
+            border-radius: 8px;
+            padding: 5px;
+
+            &:focus {
+              outline: none !important;
+              border: 1px solid $c-title;
+            }
+          }
+        }
+
+        .apiSignExample {
+          font-family: $font-f-title;
+          font-size: 10px;
+          font-weight: $font-w-400;
+        }
+      }
+    }
+
+    .profile {
+      .profileHeader {
+        margin-bottom: 20px;
+
+        .profileInfo {
+          display: flex;
+          flex-direction: column;
+          .name {
+            font-family: $font-f-title;
+            color: $c-title;
+            font-weight: $font-w-700;
+            text-transform: capitalize;
+            font-size: 56px;
+          }
+          span {
+            margin-bottom: 3px;
+            font-family: $font-f-title;
+            font-weight: $font-w-400;
+          }
+        }
+      }
+    }
+
+    .logout-btn {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}

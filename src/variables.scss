@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+
+$font-f-primary: "Nunito", sans-serif;
+$font-f-secondary: "Inter", sans-serif;
+$font-f-title: "Poppins", sans-serif;
+
+$font-w-400: 400;
+$font-w-700: 700;
+$font-w-900: 900;
+
+$c-primary: #000;
+$c-secondary: #fff;
+$c-title: #ff5a1e;
+$c-var: #3d3d3d;
+$c-detail: #8c52ff;
+$c-link-primary: #3d3d3d;
+$c-link-hover: #000;
+$c-subTitle: rgb(183, 177, 177);
+
+$back-c-primary: #fff;
+$back-c-detail: radial-gradient(
+  circle at 12.8% 28%,
+  rgb(206, 155, 243) 0%,
+  #8c52ff 90%
+);
+$back-c-highlight: hsla(0, 0%, 5%, 0.2);
+$back-c-button-hover: #000;
+$border-c-var: hsla(0, 0%, 5%, 0.2);
+
+$border-modal: 1px solid $border-c-var;
+
+$ls-primary: 0.05rem;
+$ls-secondary: -0.05rem;
+$ls-link: 0.1rem;
+$ls-button: 0.12rem;
+
+$z-nav: 57;
+$z-modal: 59;

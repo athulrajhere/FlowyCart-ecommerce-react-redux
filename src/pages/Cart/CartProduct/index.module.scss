@@ -1,0 +1,128 @@
+.cartCardWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  gap: 0;
+  border-radius: 16px;
+
+  &:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  @media (min-width: 496px) {
+    gap: 5rem;
+  }
+  .cartCardContainer {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    gap: 2rem;
+    .cartCardImage {
+      width: 8rem;
+      height: 8rem;
+      object-fit: contain;
+      background-color: $c-secondary;
+      border-radius: 20px;
+      padding: 10px;
+      position: relative;
+      transition: transform 0.3s ease;
+
+      @media (min-width: 496px) {
+        width: 10rem;
+        height: 10rem;
+        padding: 20px;
+      }
+    }
+    .cartCardDetails {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+
+      @media (min-width: 496px) {
+        gap: 5rem;
+      }
+
+      .cartCardLeft {
+        max-width: 10rem;
+        .title {
+          font-family: $font-f-title;
+          font-weight: $font-w-700;
+          font-size: 16px;
+          letter-spacing: $ls-secondary;
+          color: $c-primary;
+
+          line-height: 1.5rem;
+          overflow-wrap: break-word;
+          hyphens: auto;
+          display: -webkit-box;
+          max-width: 400px;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          height: 100%;
+          margin-bottom: 0.4rem;
+        }
+        .size {
+          font-family: $font-f-secondary;
+          font-weight: $font-w-400;
+          font-size: 12px;
+          letter-spacing: $ls-secondary;
+          color: $c-subTitle;
+          margin-bottom: 2rem;
+        }
+        .price {
+          font-family: $font-f-title;
+          font-weight: $font-w-700;
+          font-size: 16px;
+          letter-spacing: $ls-secondary;
+          color: $c-primary;
+        }
+      }
+    }
+  }
+  .cartCardRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .cartCardRightWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 5px 10px 5px 10px;
+      border: 1px solid $c-subTitle;
+      border-radius: 12px;
+      .button {
+        font-family: $font-f-title;
+        font-weight: $font-w-700;
+        font-size: 16px;
+        letter-spacing: $ls-secondary;
+        color: $c-primary;
+        background-color: transparent;
+
+        &:disabled {
+          color: $c-subTitle;
+        }
+      }
+      .counter {
+        font-family: $font-f-title;
+        font-weight: $font-w-700;
+        font-size: 16px;
+        letter-spacing: $ls-secondary;
+        color: $c-primary;
+      }
+    }
+    .cartCardDelete {
+      display: flex;
+      justify-content: center;
+      align-self: flex-end;
+      .icon {
+        font-size: 18px;
+      }
+    }
+  }
+}

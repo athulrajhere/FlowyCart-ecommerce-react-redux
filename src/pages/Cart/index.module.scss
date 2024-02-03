@@ -1,0 +1,380 @@
+.section {
+  overflow: hidden !important;
+
+  @media (min-width: 496px) {
+    top: 0rem;
+  }
+  .container {
+    padding: 8rem 0 1.5rem 0;
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 0 2.5rem 0;
+    }
+
+    .titleContainer {
+      display: flex;
+      gap: 1rem;
+
+      .iconContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        .icon {
+          font-size: 24px;
+          margin-top: 6px;
+          color: $c-title;
+
+          @media (min-width: 496px) {
+            font-size: 56px;
+          }
+        }
+      }
+
+      .title {
+        display: flex;
+        font-family: $font-f-title;
+        font-weight: $font-w-700;
+        font-size: 24px;
+        letter-spacing: $ls-secondary;
+        color: $c-title;
+
+        @media (min-width: 496px) {
+          justify-content: center;
+          font-size: 56px;
+        }
+      }
+    }
+
+    .content {
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media (min-width: 900px) {
+        padding: 0;
+        flex-direction: row;
+      }
+      .cartLeft {
+        border-bottom: 2px solid #adadad;
+        padding-bottom: 2rem;
+
+        @media (min-width: 900px) {
+          border-right: 2px solid #adadad;
+          border-bottom: none;
+          padding-bottom: 0;
+          padding-right: 2rem;
+        }
+
+        .emptyCart {
+          display: flex;
+          justify-content: end;
+          font-family: $font-f-title;
+          font-weight: $font-w-400;
+          font-size: 16px;
+          letter-spacing: $ls-secondary;
+          color: #adadad;
+          cursor: pointer;
+
+          &:hover {
+            font-weight: $font-w-700;
+          }
+        }
+
+        .cartCardWrapper {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 0;
+          margin: 10px 0;
+          gap: 0;
+
+          @media (min-width: 496px) {
+            padding: 10px;
+            margin: 10px;
+            gap: 20rem;
+          }
+
+          .cartCardContainer {
+            display: flex;
+            justify-content: space-between;
+            border-radius: 20px;
+            gap: 2rem;
+            .cartCardImage {
+              width: 10rem;
+              height: 10rem;
+              object-fit: contain;
+              background-color: $c-secondary;
+              border-radius: 20px;
+              padding: 10px;
+              position: relative;
+              transition: transform 0.3s ease;
+
+              @media (min-width: 496px) {
+                padding: 20px;
+                width: 20rem;
+                height: 20rem;
+              }
+            }
+            .cartCardDetails {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 0;
+
+              @media (min-width: 496px) {
+                align-items: baseline;
+                gap: 5rem;
+              }
+
+              .cartCardLeft {
+                max-width: 10rem;
+                .title {
+                  font-family: $font-f-title;
+                  font-weight: $font-w-700;
+                  font-size: 12px;
+                  letter-spacing: $ls-secondary;
+                  color: $c-primary;
+
+                  line-height: 1.5rem;
+                  overflow-wrap: break-word;
+                  hyphens: auto;
+                  display: -webkit-box;
+                  max-width: 400px;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  height: 100%;
+                  margin-bottom: 0.4rem;
+
+                  @media (min-width: 496px) {
+                    line-height: 2rem;
+                    width: 16rem;
+                    font-size: 16px;
+                  }
+                }
+                .size {
+                  font-family: $font-f-secondary;
+                  font-weight: $font-w-400;
+                  font-size: 12px;
+                  letter-spacing: $ls-secondary;
+                  color: $c-subTitle;
+                  margin-bottom: 2rem;
+                }
+                .price {
+                  font-family: $font-f-title;
+                  font-weight: $font-w-700;
+                  font-size: 16px;
+                  letter-spacing: $ls-secondary;
+                  color: $c-primary;
+                  margin-bottom: 1rem;
+
+                  @media (min-width: 496px) {
+                    font-size: 24px;
+                    margin-bottom: 5rem;
+                  }
+                }
+                .return,
+                .delivery {
+                  width: 24rem;
+                  display: flex;
+                  gap: 1rem;
+                  font-size: 10px;
+                  font-weight: 100;
+
+                  @media (min-width: 496px) {
+                    font-size: 20px;
+                  }
+
+                  .title {
+                    font-weight: $font-w-400;
+                  }
+                }
+                .delivery {
+                  .icon {
+                    color: green;
+                  }
+                }
+              }
+            }
+          }
+          .cartCardRight {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            // border: 1px solid;
+            .cartCardRightWrapper {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 2rem;
+              padding: 5px 10px 5px 10px;
+              border: 1px solid $c-subTitle;
+              border-radius: 12px;
+              .button {
+                font-family: $font-f-title;
+                font-weight: $font-w-700;
+                font-size: 16px;
+                letter-spacing: $ls-secondary;
+                color: $c-primary;
+                background-color: transparent;
+
+                &:disabled {
+                  color: $c-subTitle;
+                }
+              }
+              .counter {
+                font-family: $font-f-title;
+                font-weight: $font-w-700;
+                font-size: 16px;
+                letter-spacing: $ls-secondary;
+                color: $c-primary;
+              }
+            }
+            .cartCardDelete {
+              display: flex;
+              justify-content: center;
+              align-self: flex-end;
+              .icon {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+      .cartRight {
+        padding-top: 2rem;
+
+        @media (min-width: 496px) {
+          margin-left: 2rem;
+          font-size: 20px;
+        }
+
+        .coupon {
+          margin-bottom: 2rem;
+          .title {
+            font-family: $font-f-title;
+            font-weight: $font-w-700;
+            font-size: 16px;
+            color: #adadad;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+          }
+          .couponContent {
+            display: flex;
+            .iconContainer {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-right: 1rem;
+              .icon {
+                font-size: 16px;
+              }
+            }
+            .title {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: $c-primary;
+              font-weight: $font-w-700;
+              font-size: 12px;
+              margin-top: 2px;
+              margin-right: 4rem;
+              text-transform: none;
+            }
+            .button {
+              font-family: $font-f-title;
+              font-weight: $font-w-700;
+              font-size: 12px;
+              letter-spacing: $ls-secondary;
+              color: $c-primary;
+              background-color: transparent;
+              text-transform: uppercase;
+              border: 1px solid $c-title;
+              border-radius: 8px;
+              padding: 2px 10px;
+
+              &:disabled {
+                color: $c-subTitle;
+              }
+            }
+          }
+        }
+        .priceDetails {
+          .title {
+            font-family: $font-f-title;
+            font-weight: $font-w-700;
+            font-size: 16px;
+            color: #adadad;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+          }
+          .priceContent {
+            display: flex;
+            justify-content: space-between;
+            .title {
+              color: $c-primary;
+              font-weight: $font-w-400;
+              font-size: 12px;
+              margin-top: 2px;
+              margin-right: 4rem;
+              text-transform: none;
+            }
+            .price {
+              font-weight: $font-w-700;
+              font-size: 12px;
+            }
+          }
+        }
+        .totalContent {
+          display: flex;
+          justify-content: space-between;
+          border-top: 2px solid #adadad;
+          margin-top: 1rem;
+          padding-top: 1rem;
+          .title {
+            font-family: $font-f-title;
+            font-weight: $font-w-700;
+            font-size: 16px;
+            margin-bottom: 2rem;
+          }
+          .price {
+            margin-top: 2px;
+            font-family: $font-f-title;
+            font-size: 16px;
+          }
+        }
+        .button {
+          background: transparent;
+          font-family: $font-f-title;
+          font-weight: $font-w-700;
+          background-color: $c-title;
+          color: $c-primary;
+          text-transform: uppercase;
+          border-radius: 16px;
+          padding: 10px;
+
+          position: fixed;
+          bottom: 0;
+          width: 90%;
+
+          @media (min-width: 900px) {
+            width: 100%;
+            position: relative;
+          }
+
+          &:hover {
+            color: $c-secondary;
+          }
+        }
+      }
+    }
+  }
+}

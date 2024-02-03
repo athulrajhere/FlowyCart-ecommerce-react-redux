@@ -1,0 +1,251 @@
+.section {
+  overflow: hidden !important;
+
+  @media (min-width: 496px) {
+    top: 0rem;
+  }
+  .container {
+    padding: 8rem 0 1.5rem 0;
+
+    @media (min-width: 768px) {
+      padding: 8rem 0 2.5rem 0;
+    }
+
+    .section_title_top {
+      font-family: $font-f-title;
+      font-weight: $font-w-700;
+      font-size: 36px;
+      letter-spacing: $ls-secondary;
+      color: $c-title;
+      line-height: 0.3;
+      margin-bottom: 0.4rem;
+    }
+    .section_title_bottom {
+      font-family: $font-f-title;
+      font-weight: $font-w-400;
+      font-size: 16px;
+      color: $c-title;
+    }
+    .productContainer {
+      display: flex;
+      flex-direction: column;
+      margin-top: 5rem;
+      justify-content: space-around;
+      gap: 5rem;
+      margin: 5rem 0;
+      transition: transform 0.3s ease;
+      .productImageContainer {
+        display: flex;
+        justify-content: center;
+
+        .image {
+          max-width: 50rem;
+          max-height: 50rem;
+          object-fit: contain;
+          background-color: $c-secondary;
+          border-radius: 20px;
+          padding: 2rem;
+          position: relative;
+          transition: transform 0.3s ease;
+
+          @media (max-width: 478px) {
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 20x;
+          }
+        }
+      }
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        margin: 5rem 10rem;
+      }
+      .productDetailsContainer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .titleContainer {
+          .title {
+            font-family: $font-f-primary;
+            font-weight: $font-w-900;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: $ls-secondary;
+            color: $c-title;
+          }
+          .subHeading {
+            font-family: $font-f-secondary;
+            font-weight: $font-w-400;
+            font-size: 12px;
+            letter-spacing: $ls-secondary;
+            color: $c-primary;
+            margin-bottom: 0;
+
+            line-height: 1.5rem;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            display: -webkit-box;
+            max-width: 400px;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 100%;
+          }
+          @media (min-width: 768px) {
+            .title {
+              font-size: 36px;
+            }
+            .subHeading {
+              font-size: 12px;
+              display: contents;
+              margin-bottom: 2rem;
+            }
+          }
+        }
+        .sizeContainer {
+          .title {
+            font-family: $font-f-secondary;
+            text-transform: none;
+            font-weight: $font-w-400;
+            font-size: 16px;
+            color: $c-primary;
+            margin-bottom: 1rem;
+          }
+
+          .categories {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.4rem;
+            .buttonContainer {
+              display: flex;
+              flex-wrap: wrap;
+              font-size: 10px;
+              gap: 0;
+              @media (min-width: 496px) {
+                display: flex;
+              }
+              .button {
+                float: left;
+                margin: 0 5px 0 0;
+                min-width: 50px;
+                height: 40px;
+                position: relative;
+
+                @media (max-width: 496px) {
+                  min-width: 50px;
+                }
+              }
+
+              .button label,
+              .button input {
+                display: flex;
+                justify-content: center;
+                border-radius: 999rem;
+                padding: 0.8rem 1.3rem;
+                border: 1px solid;
+                font-family: $font-f-title;
+              }
+
+              .button input[type="radio"] {
+                opacity: 0.011;
+                z-index: 100;
+                display: none;
+              }
+
+              .button input[type="radio"]:checked + label {
+                background: $c-title;
+                color: $c-secondary;
+                font-family: $font-f-title;
+                border-radius: 999rem;
+                padding: 0.8rem 1.3rem;
+              }
+
+              .button label {
+                cursor: pointer;
+                z-index: 90;
+                line-height: 1.8em;
+              }
+            }
+          }
+        }
+        .priceContainer {
+          .title {
+            font-family: $font-f-secondary;
+            text-transform: none;
+            font-weight: $font-w-400;
+            font-size: 16px;
+            color: $c-primary;
+            margin-bottom: 0.4rem;
+          }
+          .price {
+            font-family: $font-f-secondary;
+            text-transform: none;
+            font-weight: $font-w-900;
+            font-size: 24px;
+            color: $c-primary;
+            margin-bottom: 0.4rem;
+          }
+        }
+        .addToCartContainer {
+          display: flex;
+          font-family: $font-f-title;
+          font-weight: $font-w-700;
+          color: $c-primary;
+          font-size: 1.2rem;
+          gap: 1rem;
+
+          @media (min-width: 1200px) {
+            padding: 1rem 0;
+            font-size: 1.4rem;
+          }
+          .continueShopping {
+            display: flex;
+            font-size: 12px;
+            font-family: $font-f-title;
+            font-weight: $font-w-400;
+            background-color: #ffba00;
+            color: $c-primary;
+            line-height: 1.5;
+            border-radius: 16px;
+            padding: 0.8rem 2rem;
+            cursor: pointer;
+
+            &:hover,
+            &:active,
+            &:focus {
+              border: none;
+              font-weight: $font-w-700;
+              background-color: #ffba00;
+              color: $c-primary;
+            }
+
+            @media (min-width: 478px) {
+              font-size: 16px;
+            }
+          }
+          .addToCart {
+            @extend .continueShopping;
+            background-color: $c-title;
+            color: $c-secondary;
+
+            &:hover,
+            &:active,
+            &:focus {
+              border: none;
+              font-weight: $font-w-700;
+              background-color: $c-title;
+              color: $c-secondary;
+            }
+          }
+        }
+
+        @media (min-width: 768px) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
