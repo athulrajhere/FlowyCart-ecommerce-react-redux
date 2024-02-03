@@ -23,10 +23,10 @@ FlowyCart - An E-commerce site build using React, Redux, Redux-toolkit, React-ro
 + Lazy loading of images
 + Image Optimization
 + Static footer containing a set of links
-+ Home (List products)
++ Quick View
 + Product Details
 + Cart
-+ Login / Register
++ Login
 
 ## Installation
 
