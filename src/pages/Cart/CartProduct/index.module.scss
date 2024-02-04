@@ -1,8 +1,8 @@
 .cartCardWrapper {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  margin: 10px;
+  padding: 5px;
+  margin: 5px;
   gap: 0;
   border-radius: 16px;
 
@@ -12,6 +12,8 @@
 
   @media (min-width: 496px) {
     gap: 5rem;
+    padding: 10px;
+    margin: 10px;
   }
   .cartCardContainer {
     display: flex;
@@ -51,7 +53,7 @@
         .title {
           font-family: $font-f-title;
           font-weight: $font-w-700;
-          font-size: 16px;
+          font-size: 12px;
           letter-spacing: $ls-secondary;
           color: $c-primary;
 
@@ -66,6 +68,10 @@
           text-overflow: ellipsis;
           height: 100%;
           margin-bottom: 0.4rem;
+
+          @media (min-width: 496px) {
+            font-size: 16px;
+          }
         }
         .size {
           font-family: $font-f-secondary;
