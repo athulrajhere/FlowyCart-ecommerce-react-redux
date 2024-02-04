@@ -19,6 +19,8 @@
     border-radius: 20px;
     gap: 2rem;
     .cartCardImage {
+      display: flex;
+      justify-content: center;
       width: 8rem;
       height: 8rem;
       object-fit: contain;
