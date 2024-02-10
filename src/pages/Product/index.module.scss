@@ -212,6 +212,10 @@
             border-radius: 16px;
             padding: 0.8rem 2rem;
             cursor: pointer;
+            min-width: 12rem;
+            height: 48px;
+            justify-content: center;
+            align-items: center;
 
             &:hover,
             &:active,
@@ -224,13 +228,13 @@
 
             @media (min-width: 478px) {
               font-size: 16px;
+              min-width: 14rem;
             }
           }
           .addToCart {
             @extend .continueShopping;
             background-color: $c-title;
             color: $c-secondary;
-
             &:hover,
             &:active,
             &:focus {

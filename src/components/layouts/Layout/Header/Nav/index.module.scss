@@ -60,11 +60,8 @@
   }
 
   & li {
-    font-size: 1.3rem;
-
-    @media (min-width: 768px) {
-      font-size: 2rem;
-    }
+    font-size: 2rem;
+    
     @media (min-width: 2560px) {
       font-size: 3rem;
     }

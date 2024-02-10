@@ -124,8 +124,6 @@ textarea {
         gap: 5rem;
       }
 
-      
-
       .cartCardContainer {
         display: flex;
         justify-content: space-between;
@@ -170,13 +168,18 @@ textarea {
               overflow-wrap: break-word;
               hyphens: auto;
               display: -webkit-box;
-              max-width: 400px;
+              max-width: 10rem;
               -webkit-line-clamp: 2;
               -webkit-box-orient: vertical;
               overflow: hidden;
               text-overflow: ellipsis;
               height: 100%;
               margin-bottom: 0.4rem;
+
+              @media (min-width: 496px) {
+                gap: 5rem;
+                max-width: 8rem;
+              }
             }
             .size {
               font-family: $font-f-secondary;
@@ -242,7 +245,6 @@ textarea {
   }
 
   .footer_container {
-    position: absolute;
     bottom: 0;
     width: 100%;
     background-color: hsla(0, 0%, 100%, 0.75);

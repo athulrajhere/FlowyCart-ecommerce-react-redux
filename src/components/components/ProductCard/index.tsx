@@ -3,16 +3,20 @@ import styles from "./index.module.scss";
 import { Link } from "react-router-dom";
 import { Product } from "../../../types/product";
 import { motion } from "framer-motion";
-import { MdArrowOutward } from "react-icons/md";
 import { useAppDispatch } from "../../../app/hooks";
 import { CartItem } from "../../../types/cart";
 import { addToCart } from "../../../features/cart/cartSlice";
 import { CgShoppingBag } from "react-icons/cg";
-import { useMediaQuery } from "react-responsive";
 import Button from "../Button";
+import Spinner from "../Spinner";
 
-const ProductCard: FC<Product> = ({
+interface ProductCardProps extends Product {
+  key: number;
+}
+
+const ProductCard: FC<ProductCardProps> = ({
   id,
+  key,
   title,
   price,
   category,
@@ -21,17 +25,16 @@ const ProductCard: FC<Product> = ({
 }) => {
   const dispatch = useAppDispatch();
 
-  const [showIcons, setShowIcons] = useState(false);
+  // const [showIcons, setShowIcons] = useState(false);
+  const [isLoadingProduct, setIsLoadingProduct] = useState(false);
 
-  const isBigScreen = useMediaQuery({
-    query: "(min-width: 768px)",
-  });
-
-  const showActionIcons = (isShow: boolean) => {
-    isShow ? setShowIcons(true) : setShowIcons(false);
-  };
+  // const showActionIcons = (isShow: boolean) => {
+  //   isShow ? setShowIcons(true) : setShowIcons(false);
+  // };
 
   const addToCartHandler = () => {
+    setIsLoadingProduct(true);
+
     const cartProduct: CartItem = {
       quantity: 1,
       product: {
@@ -43,17 +46,20 @@ const ProductCard: FC<Product> = ({
         category: category,
       },
     };
-    dispatch(addToCart(cartProduct));
+
+    dispatch(addToCart(cartProduct)).then(() => {
+      setIsLoadingProduct(false);
+    });
   };
 
   return (
     <motion.div
       id={title}
-      key={id}
+      key={key}
       tabIndex={id}
       whileHover={{ cursor: "pointer" }}
-      onMouseEnter={() => showActionIcons(true)}
-      onMouseLeave={() => showActionIcons(false)}
+      // onMouseEnter={() => showActionIcons(true)}
+      // onMouseLeave={() => showActionIcons(false)}
       whileTap={{ cursor: "grabbing" }}
       transition={{
         ease: "easeInOut",
@@ -62,55 +68,38 @@ const ProductCard: FC<Product> = ({
     >
       <div className={styles.productItem}>
         <div className={styles.productPic}>
-          <Link to={`/products/${id}`}>
+          <Link to={`/products/${String(id)}`}>
             <img src={image} alt={title} />
           </Link>
-          {showIcons && isBigScreen && (
-            <div className={styles.carouselHoverOverlay}>
-              <div className={styles.carouselHoverWrapper}>
-                <div className={styles.carouselHoverContent}>
-                  <motion.button
-                    key="cart"
-                    className={styles.carouselHoverBtn}
-                    whileHover={{ scale: 1.5 }}
-                    onClick={() => addToCartHandler()}
-                  >
-                    <CgShoppingBag className={styles.icon} />
-                  </motion.button>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </div>
       <div className={styles.productDetailsContainer}>
-        <div className={styles.productDetails}>
-          <div className={styles.productTitle}>
-            <div>{title}</div>
+        <Link
+          to={`/products/${String(id)}`}
+          className={styles.productDetailsWrapper}
+        >
+          <div className={styles.productDetails}>
+            <div className={styles.productTitle}>
+              <div>{title}</div>
+            </div>
+            <div className={styles.productPrice}>{price}$</div>
           </div>
-          <div className={styles.productPrice}>{price}$</div>
-        </div>
-        {isBigScreen ? (
-          <motion.div
-            key="cart"
-            whileHover={{ zoom: 1.2 }}
-            style={{ height: "100%" }}
-          >
-            <Link
-              to={`/products/${String(id)}`}
-              className={styles.iconCcontainer}
-            >
-              <MdArrowOutward className={styles.icon} />
-            </Link>
-          </motion.div>
-        ) : (
-          <Button
-            className={styles.iconCcontainer}
-            onClick={() => addToCartHandler()}
-          >
-            <CgShoppingBag className={styles.icon} />
+        </Link>
+        <motion.div
+          key={key}
+          whileHover={{ zoom: 1.2 }}
+          style={{ height: "100%" }}
+          onClick={() => addToCartHandler()}
+        >
+          <Button className={styles.iconCcontainer}>
+            {isLoadingProduct && <Spinner className={"addToCart"} />}
+            <CgShoppingBag
+              className={`${styles.icon} ${
+                isLoadingProduct && styles.loadingIcon
+              }`}
+            />
           </Button>
-        )}
+        </motion.div>
       </div>
     </motion.div>
   );

@@ -86,7 +86,7 @@ export const authSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.user = null;
-        state.status = STATUS.IDLE;
+        state.status = STATUS.ERROR;
         toast.error(state.status);
       })
       .addCase(getUser.pending, (state: AuthState) => {
@@ -108,7 +108,7 @@ export const authSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.user = null;
-        state.status = STATUS.IDLE;
+        state.status = STATUS.ERROR;
         toast.error(state.status);
       })
       .addCase(logout.fulfilled, (state: AuthState) => {

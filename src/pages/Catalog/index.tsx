@@ -56,10 +56,11 @@ const Catalog = () => {
         <div className={styles.title}>{convertedString}</div>
       </div>
       <div className={styles.productList}>
-        {products?.map((product) => {
+        {products?.map((product, index) => {
           return (
             <ProductCard
               id={product.id}
+              key={index}
               title={product.title}
               price={product.price}
               category={product.category}

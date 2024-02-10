@@ -1,9 +1,9 @@
 import styles from "./index.module.scss";
 
-const Spinner = () => {
+const Spinner = ({ className }: { className?: string }) => {
   return (
     <div className={styles.loaderContainer}>
-      <div className={styles.loader}></div>
+      <div className={className ? styles[className] : styles.loader}></div>
     </div>
   );
 };

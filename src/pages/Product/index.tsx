@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { getSingleProduct } from "../../features/product/productSlice";
 import styles from "./index.module.scss";
@@ -15,7 +15,10 @@ const Product = () => {
   const dispatch = useAppDispatch();
   const { id } = useParams();
 
+  const [isLoadingProduct, setIsLoadingProduct] = useState(false);
+
   const addToCartHandler = () => {
+    setIsLoadingProduct(true);
     console.log("I am adding to cart");
     const cartProduct: CartItem = {
       quantity: 1,
@@ -28,7 +31,9 @@ const Product = () => {
         category: product.category,
       },
     };
-    dispatch(addToCart(cartProduct));
+    dispatch(addToCart(cartProduct)).then(() => {
+      setIsLoadingProduct(false);
+    });
   };
 
   useEffect(() => {
@@ -91,7 +96,11 @@ const Product = () => {
                 className={styles.addToCart}
                 onClick={() => addToCartHandler()}
               >
-                Add to Cart
+                {isLoadingProduct ? (
+                  <Spinner className={"addToCartSm"} />
+                ) : (
+                  "Add to Cart"
+                )}
               </div>
               <Link to={`/catalog/All`} className={styles.continueShopping}>
                 Continue Shopping

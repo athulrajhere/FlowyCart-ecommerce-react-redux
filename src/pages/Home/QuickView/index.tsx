@@ -71,10 +71,11 @@ const QuickView = () => {
           </Link>
         </div>
         <div className={styles.productList}>
-          {products?.slice(0, 8)?.map((product) => {
+          {products?.slice(0, 8)?.map((product, index) => {
             return (
               <ProductCard
                 id={product.id}
+                key={index}
                 title={product.title}
                 price={product.price}
                 category={product.category}

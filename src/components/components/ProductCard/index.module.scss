@@ -77,6 +77,9 @@
       font-size: 2rem;
       color: white;
     }
+    .loadingIcon {
+      position: absolute;
+    }
   }
 }
 
@@ -143,6 +146,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .productDetailsWrapper {
+      &:hover {
+        color: $c-title;
+      }
+    }
     .productDetails {
       .productTitle {
         font-family: "Poppins";
@@ -166,11 +174,14 @@
       justify-content: center;
       align-items: center;
       border-radius: 50%;
-      background-color: #ff5a1e;
+      background-color: $c-title;
 
       .icon {
         font-size: 2rem;
         color: white;
+      }
+      .loadingIcon {
+        position: absolute;
       }
     }
   }

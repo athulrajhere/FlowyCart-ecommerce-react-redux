@@ -1,8 +1,8 @@
 .loaderContainer {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .loader {
     display: inline-block;
     border: 10px solid #f3f3f3;
@@ -11,6 +11,25 @@
     width: 80px;
     height: 80px;
     animation: spin 1s linear infinite;
+  }
+
+  .addToCart {
+    @extend .loader;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    width: 32px;
+    height: 32px;
+
+    @media (min-width: 768px) {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .addToCartSm {
+    @extend .addToCart;
+    width: 32px;
+    height: 32px;
   }
 
   @keyframes spin {
