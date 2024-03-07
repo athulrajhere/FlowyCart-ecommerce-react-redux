@@ -13,7 +13,7 @@ const HeroSection = () => {
         <div className={styles.content_wrapper}>
           <header className={styles.header}>
             <h1 className={styles.title} style={{ fontWeight: 1000 }}>
-              unleash your Fashion
+              unleash your Style
             </h1>
             <h1 className={styles.title} style={{ fontWeight: 1000 }}>
               find your Flow.
